@@ -1,0 +1,60 @@
+POST http://localhost:8080/covid/utilisateur
+Content-Type: application/json
+
+{
+  "nom":"RaphaelP",
+  "mdp":"123123",
+  "dateNaissance":"29/08/1997",
+  "lieuNaissance":"Port",
+  "policier":true
+}
+
+###
+
+POST http://localhost:8080/covid/utilisateur
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmcmVkIiwicm9sZXMiOlsiUk9MRV9QT0xJQ0lFUiIsIlJPTEVfVVNFUiJdLCJleHAiOjE2MTg0MzU2ODh9.u-jm3b5rz0jt-4ZTiFJ41a4DIO95rnt00Zs--3z3L9Q
+Content-Type: application/json
+
+{
+  "nom":"JeanJean",
+  "mdp":"321321",
+  "dateNaissance":"31/12/1789",
+  "lieuNaissance":"Marseille",
+  "policier":false
+}
+
+###
+
+GET http://localhost:8080/covid/utilisateur/raph
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXBoIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImV4cCI6MTYxODQ4OTQzNX0.SIUFQzzrxDZ5yin8DLhGNlevReXH3wu5xGHjezo0kUY
+
+###
+
+POST http://localhost:8080/covid/login?username=fred&password=fred
+
+###
+
+POST http://localhost:8080/covid/login?username=raph&password=raph
+
+###
+
+POST http://localhost:8080/covid/utilisateur/attestation/new
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmcmVkIiwicm9sZXMiOlsiUk9MRV9QT0xJQ0lFUiIsIlJPTEVfVVNFUiJdLCJleHAiOjE2MTg0OTA4MTJ9.j4FisZ2xCvEWN65GWEWhKb7BXIDHf3_EJcyA1Vd7c7I
+Content-Type: application/json
+
+{
+"motif": "Faire les courses"
+}
+
+###
+
+GET http://localhost:8080/covid/utilisateur/attestation
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXBoIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImV4cCI6MTYxODQ5MDI5M30.Yv3u16JCPUXbUIdBktvR94IThYdxF1SBgqzeuMdd6oo
+
+###
+
+GET http://localhost:8080/covid/utilisateur/attestation/cffb07a4-2467-451d-b1b8-67ea40c7f32d
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmcmVkIiwicm9sZXMiOlsiUk9MRV9QT0xJQ0lFUiIsIlJPTEVfVVNFUiJdLCJleHAiOjE2MTg0OTA4MTJ9.j4FisZ2xCvEWN65GWEWhKb7BXIDHf3_EJcyA1Vd7c7I
+Content-Type: application/json
+
+
